@@ -8,20 +8,20 @@
     
     
     
-    <link rel="../../img/favicon.ico">
+    <link rel="../../../../img/favicon.ico">
 
     
-    <title>VHDL - Embedded Linux | praton</title>
+    <title>FIFO Controller Generation - Embedded Linux | praton</title>
     
 
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../../css/base.min.css" rel="stylesheet">
-    <link href="../../css/cinder.min.css" rel="stylesheet">
-    <link href="../../css/highlight.min.css" rel="stylesheet">
+    <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../../../css/highlight.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -61,7 +61,7 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href="../..">Embedded Linux | praton</a>
+            <a class="navbar-brand" href="../../../..">Embedded Linux | praton</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -71,7 +71,7 @@
                 
                 
                     <li >
-                        <a href="../..">Home</a>
+                        <a href="../../../..">Home</a>
                     </li>
                 
                 
@@ -82,13 +82,13 @@
                         
                             
 <li >
-    <a href="../../OS/vmap/">Virtual Mapping</a>
+    <a href="../../../../OS/vmap/">Virtual Mapping</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../OS/BIOS_UEFI/">BIOS & UEFI</a>
+    <a href="../../../../OS/BIOS_UEFI/">BIOS & UEFI</a>
 </li>
 
                         
@@ -103,25 +103,25 @@
                         
                             
 <li >
-    <a href="../../Processor/basics/">Basics</a>
+    <a href="../../../../Processor/basics/">Basics</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Processor/pipelined/">Pipelined</a>
+    <a href="../../../../Processor/pipelined/">Pipelined</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Processor/superscalar/">Superscalar</a>
+    <a href="../../../../Processor/superscalar/">Superscalar</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Processor/reservation_station/">Reservation Station</a>
+    <a href="../../../../Processor/reservation_station/">Reservation Station</a>
 </li>
 
                         
@@ -141,13 +141,13 @@
         
             
 <li >
-    <a href="../../Projects/Current/ajit_hpc/">AJIT HPC System</a>
+    <a href="../../ajit_hpc/">AJIT HPC System</a>
 </li>
 
         
             
 <li >
-    <a href="../../Projects/Current/iitb_risc_superscalar/">IITB-RISC Superscalar design</a>
+    <a href="../../iitb_risc_superscalar/">IITB-RISC Superscalar design</a>
 </li>
 
         
@@ -162,7 +162,7 @@
         
             
 <li >
-    <a href="../../Projects/Archived/pcie_driver/">PCIe C driver</a>
+    <a href="../../../Archived/pcie_driver/">PCIe C driver</a>
 </li>
 
         
@@ -176,7 +176,7 @@
                 
                 
                     <li >
-                        <a href="../intro/">Tutorials</a>
+                        <a href="../../../../Tutorials/intro/">Tutorials</a>
                     </li>
                 
                 
@@ -187,13 +187,13 @@
                         
                             
 <li >
-    <a href="../../Guides/How_to_Embedded_Resume/main/">How to make an Embedded Resume</a>
+    <a href="../../../../Guides/How_to_Embedded_Resume/main/">How to make an Embedded Resume</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Guides/How_to_use_mutt/main/">How to use mutt</a>
+    <a href="../../../../Guides/How_to_use_mutt/main/">How to use mutt</a>
 </li>
 
                         
@@ -208,19 +208,19 @@
                         
                             
 <li >
-    <a href="../../Ricing/gtk/">GTK changes</a>
+    <a href="../../../../Ricing/gtk/">GTK changes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Ricing/boot_screen/">Boot screen changes</a>
+    <a href="../../../../Ricing/boot_screen/">Boot screen changes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Ricing/grub/">Tinkering with GRUB</a>
+    <a href="../../../../Ricing/grub/">Tinkering with GRUB</a>
 </li>
 
                         
@@ -230,7 +230,7 @@
                 
                 
                     <li >
-                        <a href="../../About/about/">About</a>
+                        <a href="../../../../About/about/">About</a>
                     </li>
                 
                 
@@ -252,11 +252,50 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#fifo-controller-generation">FIFO Controller Generation</a></li>
+            <li class="second-level"><a href="#need-for-a-memory-mapped-fifo">Need for a Memory Mapped FIFO</a></li>
+                
+            <li class="second-level"><a href="#our-implementation">Our implementation</a></li>
+                
+                <li class="third-level"><a href="#hls-generation">HLS Generation</a></li>
+                <li class="third-level"><a href="#full-flow">Full Flow</a></li>
+                <li class="third-level"><a href="#testing-of-interface">Testing of Interface</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-</div>
+<h1 id="fifo-controller-generation">FIFO Controller Generation</h1>
+<h2 id="need-for-a-memory-mapped-fifo">Need for a Memory Mapped FIFO</h2>
+<p>The Debug interface to the processor requires two 64-bit FIFOs compatible with the generic AXI periheral interface. Here by compatibility we mean they 
+need to have a Slave AXI interface in order to establish a bidirectional data flow thorugh the PCIe-AXI interface.</p>
+<p>The problem is solved by dividing it into two parts and both of them handling simpler generic tasks. The first block provides the Slave AXI interface as
+an input and a control interface on the output side to the other block which acts as a data FIFO. A similar block is created to perform the reverse 
+operation as well.</p>
+<h2 id="our-implementation">Our implementation</h2>
+<h3 id="hls-generation">HLS Generation</h3>
+<p>We employ <strong>High Level Synthesis</strong> to generate the FIFO controllers. HLS enables us to write short code snippets as shown below to generate the Slave AXI 
+interfaces and control signals.
+{ Explain the use of pragmas }</p>
+<pre><code class="cpp">void fifo_to_axi_slave (ap_uint&lt;32&gt; *data_out, bool *data_valid, hls::stream&lt;ap_uint&lt;32&gt; &gt; &amp;in_fifo) {
+    #pragma HLS INTERFACE s_axilite port=return
+    #pragma HLS INTERFACE s_axilite port=data_out
+    #pragma HLS INTERFACE s_axilite port=data_valid
+    if (!in_fifo.empty ()) {
+        *data_out   = in_fifo.read ();
+        *data_valid = true;
+    }
+    else {
+        *data_valid = false;
+    }
+}
+</code></pre>
+
+<h3 id="full-flow">Full Flow</h3>
+<p>The figure below shows our DRAM interface implementation as part of a generic AXI peripheral system. DRAM interfaces with the AXI interconnect with the aidof a Memory Controller specifically employed for DRAMs. Memory controller was generated using the <strong>MIG</strong>(Memory Interface Generator) utility of 
+Vivado 2017.1. </p>
+<p><img alt="Full Flow with FIFO Controllers" src="../block_diagrams/FIFO_Generation/FIFO_Controller.png" /></p>
+<h3 id="testing-of-interface">Testing of Interface</h3>
+<p>We tested the interface using the XSCT command line utility which employs the JTAG interface and gives a direct access to all AXI peripherals. Later on we also tested this with a PCI express inerface from the Host CPU using the <strong>pcimem</strong> utility.</p></div>
         
         
     </div>
@@ -271,13 +310,13 @@
         
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/bootstrap-3.0.3.min.js"></script>
-    <script src="../../js/highlight.pack.js"></script>
+    <script src="../../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script>var base_url = "../.."</script>
+    <script>var base_url = "../../../.."</script>
     
-    <script src="../../js/base.js"></script>
-    <script src="../../search/main.js"></script>
+    <script src="../../../../js/base.js"></script>
+    <script src="../../../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

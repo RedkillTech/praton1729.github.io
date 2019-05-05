@@ -8,20 +8,20 @@
     
     
     
-    <link rel="../../img/favicon.ico">
+    <link rel="../../../../img/favicon.ico">
 
     
-    <title>VHDL - Embedded Linux | praton</title>
+    <title>PCIe-AXI Interface - Embedded Linux | praton</title>
     
 
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../../css/base.min.css" rel="stylesheet">
-    <link href="../../css/cinder.min.css" rel="stylesheet">
-    <link href="../../css/highlight.min.css" rel="stylesheet">
+    <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../../../css/highlight.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -61,7 +61,7 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href="../..">Embedded Linux | praton</a>
+            <a class="navbar-brand" href="../../../..">Embedded Linux | praton</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -71,7 +71,7 @@
                 
                 
                     <li >
-                        <a href="../..">Home</a>
+                        <a href="../../../..">Home</a>
                     </li>
                 
                 
@@ -82,13 +82,13 @@
                         
                             
 <li >
-    <a href="../../OS/vmap/">Virtual Mapping</a>
+    <a href="../../../../OS/vmap/">Virtual Mapping</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../OS/BIOS_UEFI/">BIOS & UEFI</a>
+    <a href="../../../../OS/BIOS_UEFI/">BIOS & UEFI</a>
 </li>
 
                         
@@ -103,25 +103,25 @@
                         
                             
 <li >
-    <a href="../../Processor/basics/">Basics</a>
+    <a href="../../../../Processor/basics/">Basics</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Processor/pipelined/">Pipelined</a>
+    <a href="../../../../Processor/pipelined/">Pipelined</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Processor/superscalar/">Superscalar</a>
+    <a href="../../../../Processor/superscalar/">Superscalar</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Processor/reservation_station/">Reservation Station</a>
+    <a href="../../../../Processor/reservation_station/">Reservation Station</a>
 </li>
 
                         
@@ -141,13 +141,13 @@
         
             
 <li >
-    <a href="../../Projects/Current/ajit_hpc/">AJIT HPC System</a>
+    <a href="../../ajit_hpc/">AJIT HPC System</a>
 </li>
 
         
             
 <li >
-    <a href="../../Projects/Current/iitb_risc_superscalar/">IITB-RISC Superscalar design</a>
+    <a href="../../iitb_risc_superscalar/">IITB-RISC Superscalar design</a>
 </li>
 
         
@@ -162,7 +162,7 @@
         
             
 <li >
-    <a href="../../Projects/Archived/pcie_driver/">PCIe C driver</a>
+    <a href="../../../Archived/pcie_driver/">PCIe C driver</a>
 </li>
 
         
@@ -176,7 +176,7 @@
                 
                 
                     <li >
-                        <a href="../intro/">Tutorials</a>
+                        <a href="../../../../Tutorials/intro/">Tutorials</a>
                     </li>
                 
                 
@@ -187,13 +187,13 @@
                         
                             
 <li >
-    <a href="../../Guides/How_to_Embedded_Resume/main/">How to make an Embedded Resume</a>
+    <a href="../../../../Guides/How_to_Embedded_Resume/main/">How to make an Embedded Resume</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Guides/How_to_use_mutt/main/">How to use mutt</a>
+    <a href="../../../../Guides/How_to_use_mutt/main/">How to use mutt</a>
 </li>
 
                         
@@ -208,19 +208,19 @@
                         
                             
 <li >
-    <a href="../../Ricing/gtk/">GTK changes</a>
+    <a href="../../../../Ricing/gtk/">GTK changes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Ricing/boot_screen/">Boot screen changes</a>
+    <a href="../../../../Ricing/boot_screen/">Boot screen changes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Ricing/grub/">Tinkering with GRUB</a>
+    <a href="../../../../Ricing/grub/">Tinkering with GRUB</a>
 </li>
 
                         
@@ -230,7 +230,7 @@
                 
                 
                     <li >
-                        <a href="../../About/about/">About</a>
+                        <a href="../../../../About/about/">About</a>
                     </li>
                 
                 
@@ -252,11 +252,45 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#pcie-axi-interface">PCIe-AXI Interface</a></li>
+            <li class="second-level"><a href="#need-for-a-pcie-interface">Need for a PCIe interface</a></li>
+                
+            <li class="second-level"><a href="#basics-of-pcie-interface">Basics of PCIe interface</a></li>
+                
+            <li class="second-level"><a href="#bars-and-address-translation">BARs and address translation</a></li>
+                
+            <li class="second-level"><a href="#our-implementation">Our implementation</a></li>
+                
+            <li class="second-level"><a href="#testing-of-interface">Testing of Interface</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-</div>
+<h1 id="pcie-axi-interface">PCIe-AXI Interface</h1>
+<h2 id="need-for-a-pcie-interface">Need for a PCIe interface</h2>
+<p>In the previous iteration of OS booting on <strong>AJIT</strong> processor the OS utilized the <strong>block RAM</strong> of the processor which was of size <strong>4 MB</strong> and the size
+of the kernel was just <strong>2 MB</strong> and now as we increase the RAM size to accomodate a heavy duty OS we need a faster way to write the image to the storage instead of JTAG and we are just in luck since VC709 has a PCIe interface and can be plugged directly into the PCIe slot of the host CPU motherboard.
+Right now we lack a flash interface in our system which would have allowed us to have a nonvolatile memory block which would not require to be written at
+every power on-off cycle of the board. Here we utilize the PCIe interface of the <strong>VC709</strong> board.</p>
+<h2 id="basics-of-pcie-interface">Basics of PCIe interface</h2>
+<p>Before diving into the implemenation details we need to revisit some essential basics of PCI express peripherals that would prove to be useful here.
+On a <strong>Linux</strong> machine one can type <code>lspci -vv</code> in the console and get a detailed output of the PCIe devices connected to the machine. Its a long list so 
+I will explain with the example of the VC709 board. 
+{ Get the screenshot and explain it }
+{ Explain the sys/resource }</p>
+<h2 id="bars-and-address-translation">BARs and address translation</h2>
+<p>Whenever reading or writing we proceed with a method of providing a base address and the offset along with it which would amount to the actual address.
+We operate here with what is knows as <strong>BAR( Base Address Register )</strong>, it is the register which would hold the base/start address of your Memory block 
+which is DRAM here. One can make multiple BARs with different base addresses to access different parts of the memory. Each BAR is set with a base address
+and an address range which it can access. Each bar created by the user gives rise to a new resource file in the <code>/sys/</code> directory of the host CPU OS which 
+as explained later in driver development can be used to access the respective memory locations.</p>
+<h2 id="our-implementation">Our implementation</h2>
+<p>The figure below shows our PCIe-AXI interface implementation as part of a generic AXI peripheral system.  </p>
+<p><img alt="PCIe-AXI interface and DRAM info flow" src="../block_diagrams/DRAM_with_PCIe/DRAM_with_PCIe.png" /></p>
+<h2 id="testing-of-interface">Testing of Interface</h2>
+<p>We tested this with a PCI express inerface from the Host CPU using the <strong>pcimem</strong> utility. Later on we developed a C driver for creating an API interface 
+which provides helper functions for sending and receiving information through the PCIe-AXI interface to the FPGA model.</p></div>
         
         
     </div>
@@ -271,13 +305,13 @@
         
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/bootstrap-3.0.3.min.js"></script>
-    <script src="../../js/highlight.pack.js"></script>
+    <script src="../../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script>var base_url = "../.."</script>
+    <script>var base_url = "../../../.."</script>
     
-    <script src="../../js/base.js"></script>
-    <script src="../../search/main.js"></script>
+    <script src="../../../../js/base.js"></script>
+    <script src="../../../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

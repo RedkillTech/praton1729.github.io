@@ -11,7 +11,7 @@
     <link rel="../../img/favicon.ico">
 
     
-    <title>VHDL - Embedded Linux | praton</title>
+    <title>Creating interface definitions in Vivado 2017.1 - Embedded Linux | praton</title>
     
 
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -252,11 +252,64 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#creating-interface-definitions-in-vivado-20171">Creating interface definitions in Vivado 2017.1</a></li>
+            <li class="second-level"><a href="#introduction">Introduction</a></li>
+                
+            <li class="second-level"><a href="#port-definition-table">Port Definition Table</a></li>
+                
+            <li class="second-level"><a href="#interface-creation">Interface creation</a></li>
+                
+            <li class="second-level"><a href="#ajit-processor-example">AJIT Processor Example</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-</div>
+<h1 id="creating-interface-definitions-in-vivado-20171">Creating interface definitions in Vivado 2017.1</h1>
+<h2 id="introduction">Introduction</h2>
+<h2 id="port-definition-table">Port Definition Table</h2>
+<p>An example table:-</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Port Name</strong></td>
+<td align="center"><strong>Port Description</strong></td>
+<td align="center"><strong>Direction</strong></td>
+<td align="center"><strong>VHDL Data Type</strong></td>
+</tr>
+<tr>
+<td align="center">data</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic_vector(32 downto 0)</td>
+</tr>
+<tr>
+<td align="center">req</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+<tr>
+<td align="center">ack</td>
+<td align="center"></td>
+<td align="center">out</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="interface-creation">Interface creation</h2>
+<blockquote>
+<p>Go to Tools &gt; Create Interface Definition</p>
+</blockquote>
+<h2 id="ajit-processor-example"><a href="../ajit_port_defs/">AJIT Processor Example</a></h2></div>
         
         
     </div>

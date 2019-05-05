@@ -11,7 +11,7 @@
     <link rel="../../img/favicon.ico">
 
     
-    <title>VHDL - Embedded Linux | praton</title>
+    <title>AJIT FPGA HPC Interface Creation - Embedded Linux | praton</title>
     
 
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -252,11 +252,209 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#ajit-fpga-hpc-interface-creation">AJIT FPGA HPC Interface Creation</a></li>
+            <li class="second-level"><a href="#afb">AFB</a></li>
+                
+                <li class="third-level"><a href="#afb-resp">AFB RESP</a></li>
+                <li class="third-level"><a href="#afb-req">AFB REQ</a></li>
+            <li class="second-level"><a href="#debug-bridge">Debug Bridge</a></li>
+                
+                <li class="third-level"><a href="#fifo-to-ajit">FIFO TO AJIT</a></li>
+                <li class="third-level"><a href="#ajit-to-fifo">AJIT TO FIFO</a></li>
+            <li class="second-level"><a href="#extra-ports">Extra Ports</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-</div>
+<h1 id="ajit-fpga-hpc-interface-creation">AJIT FPGA HPC Interface Creation</h1>
+<h3 id="afb">AFB</h3>
+<h4 id="afb-resp">AFB RESP</h4>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Port Name</strong></td>
+<td align="center"><strong>Port Description</strong></td>
+<td align="center"><strong>Direction</strong></td>
+<td align="center"><strong>VHDL Data Type</strong></td>
+</tr>
+<tr>
+<td align="center">AFB_RESPONSE_pipe_write_data</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic_vector(32 downto 0)</td>
+</tr>
+<tr>
+<td align="center">AFB_RESPONSE_pipe_write_req</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+<tr>
+<td align="center">AFB_RESPONSE_pipe_write_ack</td>
+<td align="center"></td>
+<td align="center">out</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="afb-req">AFB REQ</h4>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Port Name</strong></td>
+<td align="center"><strong>Port Description</strong></td>
+<td align="center"><strong>Direction</strong></td>
+<td align="center"><strong>VHDL Data Type</strong></td>
+</tr>
+<tr>
+<td align="center">AFB_COMMAND_pipe_read_data</td>
+<td align="center"></td>
+<td align="center">out</td>
+<td align="center">std_logic_vector(73 downto 0)</td>
+</tr>
+<tr>
+<td align="center">AFB_COMMAND_pipe_read_req</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+<tr>
+<td align="center">AFB_COMMAND_pipe_read_ack</td>
+<td align="center"></td>
+<td align="center">out</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="debug-bridge">Debug Bridge</h3>
+<h4 id="fifo-to-ajit">FIFO TO AJIT</h4>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Port Name</strong></td>
+<td align="center"><strong>Port Description</strong></td>
+<td align="center"><strong>Direction</strong></td>
+<td align="center"><strong>VHDL Data Type</strong></td>
+</tr>
+<tr>
+<td align="center">RIFFA_to_CPU_pipe_write_data</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic_vector(63 downto 0)</td>
+</tr>
+<tr>
+<td align="center">RIFFA_to_CPU_pipe_write_req</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+<tr>
+<td align="center">RIFFA_to_CPU_pipe_write_ack</td>
+<td align="center"></td>
+<td align="center">out</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ajit-to-fifo">AJIT TO FIFO</h4>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Port Name</strong></td>
+<td align="center"><strong>Port Description</strong></td>
+<td align="center"><strong>Direction</strong></td>
+<td align="center"><strong>VHDL Data Type</strong></td>
+</tr>
+<tr>
+<td align="center">CPU_to_RIFFA_pipe_read_data</td>
+<td align="center"></td>
+<td align="center">out</td>
+<td align="center">std_logic_vector(63 downto 0)</td>
+</tr>
+<tr>
+<td align="center">CPU_to_RIFFA_pipe_read_req</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+<tr>
+<td align="center">CPU_to_RIFFA_pipe_read_ack</td>
+<td align="center"></td>
+<td align="center">out</td>
+<td align="center">std_logic_vector(0  downto 0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extra-ports">Extra Ports</h3>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Port Name</strong></td>
+<td align="center"><strong>Port Description</strong></td>
+<td align="center"><strong>Direction</strong></td>
+<td align="center"><strong>VHDL Data Type</strong></td>
+</tr>
+<tr>
+<td align="center">EXTERNAL_INTERRUPT</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic_vector(0 downto 0)</td>
+</tr>
+<tr>
+<td align="center">clk</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic</td>
+</tr>
+<tr>
+<td align="center">reset</td>
+<td align="center"></td>
+<td align="center">in</td>
+<td align="center">std_logic</td>
+</tr>
+</tbody>
+</table></div>
         
         
     </div>

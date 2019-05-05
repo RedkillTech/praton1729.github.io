@@ -8,20 +8,20 @@
     
     
     
-    <link rel="../../img/favicon.ico">
+    <link rel="../../../../img/favicon.ico">
 
     
-    <title>VHDL - Embedded Linux | praton</title>
+    <title>DRAM Interface - Embedded Linux | praton</title>
     
 
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../../css/base.min.css" rel="stylesheet">
-    <link href="../../css/cinder.min.css" rel="stylesheet">
-    <link href="../../css/highlight.min.css" rel="stylesheet">
+    <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../../../css/highlight.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -61,7 +61,7 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href="../..">Embedded Linux | praton</a>
+            <a class="navbar-brand" href="../../../..">Embedded Linux | praton</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -71,7 +71,7 @@
                 
                 
                     <li >
-                        <a href="../..">Home</a>
+                        <a href="../../../..">Home</a>
                     </li>
                 
                 
@@ -82,13 +82,13 @@
                         
                             
 <li >
-    <a href="../../OS/vmap/">Virtual Mapping</a>
+    <a href="../../../../OS/vmap/">Virtual Mapping</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../OS/BIOS_UEFI/">BIOS & UEFI</a>
+    <a href="../../../../OS/BIOS_UEFI/">BIOS & UEFI</a>
 </li>
 
                         
@@ -103,25 +103,25 @@
                         
                             
 <li >
-    <a href="../../Processor/basics/">Basics</a>
+    <a href="../../../../Processor/basics/">Basics</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Processor/pipelined/">Pipelined</a>
+    <a href="../../../../Processor/pipelined/">Pipelined</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Processor/superscalar/">Superscalar</a>
+    <a href="../../../../Processor/superscalar/">Superscalar</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Processor/reservation_station/">Reservation Station</a>
+    <a href="../../../../Processor/reservation_station/">Reservation Station</a>
 </li>
 
                         
@@ -141,13 +141,13 @@
         
             
 <li >
-    <a href="../../Projects/Current/ajit_hpc/">AJIT HPC System</a>
+    <a href="../../ajit_hpc/">AJIT HPC System</a>
 </li>
 
         
             
 <li >
-    <a href="../../Projects/Current/iitb_risc_superscalar/">IITB-RISC Superscalar design</a>
+    <a href="../../iitb_risc_superscalar/">IITB-RISC Superscalar design</a>
 </li>
 
         
@@ -162,7 +162,7 @@
         
             
 <li >
-    <a href="../../Projects/Archived/pcie_driver/">PCIe C driver</a>
+    <a href="../../../Archived/pcie_driver/">PCIe C driver</a>
 </li>
 
         
@@ -176,7 +176,7 @@
                 
                 
                     <li >
-                        <a href="../intro/">Tutorials</a>
+                        <a href="../../../../Tutorials/intro/">Tutorials</a>
                     </li>
                 
                 
@@ -187,13 +187,13 @@
                         
                             
 <li >
-    <a href="../../Guides/How_to_Embedded_Resume/main/">How to make an Embedded Resume</a>
+    <a href="../../../../Guides/How_to_Embedded_Resume/main/">How to make an Embedded Resume</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Guides/How_to_use_mutt/main/">How to use mutt</a>
+    <a href="../../../../Guides/How_to_use_mutt/main/">How to use mutt</a>
 </li>
 
                         
@@ -208,19 +208,19 @@
                         
                             
 <li >
-    <a href="../../Ricing/gtk/">GTK changes</a>
+    <a href="../../../../Ricing/gtk/">GTK changes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Ricing/boot_screen/">Boot screen changes</a>
+    <a href="../../../../Ricing/boot_screen/">Boot screen changes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../Ricing/grub/">Tinkering with GRUB</a>
+    <a href="../../../../Ricing/grub/">Tinkering with GRUB</a>
 </li>
 
                         
@@ -230,7 +230,7 @@
                 
                 
                     <li >
-                        <a href="../../About/about/">About</a>
+                        <a href="../../../../About/about/">About</a>
                     </li>
                 
                 
@@ -252,11 +252,51 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#dram-interface">DRAM Interface</a></li>
+            <li class="second-level"><a href="#need-for-a-dram-interface">Need for a DRAM interface</a></li>
+                
+            <li class="second-level"><a href="#our-implementation">Our implementation</a></li>
+                
+            <li class="second-level"><a href="#mig-vs-emc-core">MIG Vs EMC Core</a></li>
+                
+            <li class="second-level"><a href="#testing-of-interface">Testing of Interface</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-</div>
+<h1 id="dram-interface">DRAM Interface</h1>
+<h2 id="need-for-a-dram-interface">Need for a DRAM interface</h2>
+<p>In the previous iteration of OS booting on <strong>AJIT</strong> processor the OS utilized the <strong>block RAM</strong> of the processor which was of size <strong>4 MB</strong> and thus took awhile to boot and only a small scale OS without much driver support(like Network drivers) could be booted, thus a need for a larger DRAM support. 
+Here we head out to utilize the onboard DRAM of the <strong>VC709</strong> board based on the ideas of our generic peripheral interface discussed before.</p>
+<h2 id="our-implementation">Our implementation</h2>
+<p>The figure below shows our DRAM interface implementation as part of a generic AXI peripheral system. DRAM interfaces with the AXI interconnect with the aidof a Memory Controller specifically employed for DRAMs. Memory controller was generated using the <strong>MIG</strong>(Memory Interface Generator) utility of 
+Vivado 2017.1. </p>
+<p><img alt="DRAM Interface" src="../block_diagrams/DRAM_without_PCIe/DRAM_without_PCIe.png" /></p>
+<p>The support for DRAM size here goes up to 4 GB per slot and since VC79 has two slots we can have a combined support upto 8GB RAM.</p>
+<h2 id="mig-vs-emc-core">MIG Vs EMC Core</h2>
+<p>The two cores provided in Vivado are for different types of memory. The following information can be found in the repsective user guides which summarise 
+their usecases:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Core</th>
+<th align="center">Memory Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">MIG</td>
+<td align="center">DDR2, DDR3, QDR-II, RLDRAM</td>
+</tr>
+<tr>
+<td align="center">EMC</td>
+<td align="center">SRAM, ZBT, and other similar SRAM like interfaces</td>
+</tr>
+</tbody>
+</table>
+<h2 id="testing-of-interface">Testing of Interface</h2>
+<p>We tested the interface using the XSCT command line utility which employs the JTAG interface and gives a direct access to all AXI peripherals. Later on we also tested this with a PCI express inerface from the Host CPU using the <strong>pcimem</strong> utility.</p></div>
         
         
     </div>
@@ -271,13 +311,13 @@
         
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/bootstrap-3.0.3.min.js"></script>
-    <script src="../../js/highlight.pack.js"></script>
+    <script src="../../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script>var base_url = "../.."</script>
+    <script>var base_url = "../../../.."</script>
     
-    <script src="../../js/base.js"></script>
-    <script src="../../search/main.js"></script>
+    <script src="../../../../js/base.js"></script>
+    <script src="../../../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
