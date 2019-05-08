@@ -287,20 +287,20 @@
 <td align="center"><strong>VHDL Data Type</strong></td>
 </tr>
 <tr>
-<td align="center">AFB_RESPONSE_pipe_write_data</td>
-<td align="center"></td>
+<td align="center">AFB_RESP_DATA</td>
+<td align="center">Data Signal</td>
 <td align="center">in</td>
 <td align="center">std_logic_vector(32 downto 0)</td>
 </tr>
 <tr>
-<td align="center">AFB_RESPONSE_pipe_write_req</td>
-<td align="center"></td>
+<td align="center">AFB_RESP_READY</td>
+<td align="center">Ready Signal</td>
 <td align="center">in</td>
 <td align="center">std_logic_vector(0  downto 0)</td>
 </tr>
 <tr>
-<td align="center">AFB_RESPONSE_pipe_write_ack</td>
-<td align="center"></td>
+<td align="center">AFB_RESP_ACCEPT</td>
+<td align="center">Acceptance Signal</td>
 <td align="center">out</td>
 <td align="center">std_logic_vector(0  downto 0)</td>
 </tr>
@@ -324,20 +324,20 @@
 <td align="center"><strong>VHDL Data Type</strong></td>
 </tr>
 <tr>
-<td align="center">AFB_COMMAND_pipe_read_data</td>
-<td align="center"></td>
+<td align="center">AFB_REQ_DATA</td>
+<td align="center">Data Signal</td>
 <td align="center">out</td>
 <td align="center">std_logic_vector(73 downto 0)</td>
 </tr>
 <tr>
-<td align="center">AFB_COMMAND_pipe_read_req</td>
-<td align="center"></td>
+<td align="center">AFB_REQ_READY</td>
+<td align="center">Ready Signal</td>
 <td align="center">in</td>
 <td align="center">std_logic_vector(0  downto 0)</td>
 </tr>
 <tr>
-<td align="center">AFB_COMMAND_pipe_read_ack</td>
-<td align="center"></td>
+<td align="center">AFB_REQ_ACCEPT</td>
+<td align="center">Acceptance Signal</td>
 <td align="center">out</td>
 <td align="center">std_logic_vector(0  downto 0)</td>
 </tr>
@@ -362,19 +362,19 @@
 <td align="center"><strong>VHDL Data Type</strong></td>
 </tr>
 <tr>
-<td align="center">RIFFA_to_CPU_pipe_write_data</td>
+<td align="center">FIFO_TO_AJIT_DATA</td>
 <td align="center"></td>
 <td align="center">in</td>
 <td align="center">std_logic_vector(63 downto 0)</td>
 </tr>
 <tr>
-<td align="center">RIFFA_to_CPU_pipe_write_req</td>
+<td align="center">FIFO_TO_AJIT_REQ</td>
 <td align="center"></td>
 <td align="center">in</td>
 <td align="center">std_logic_vector(0  downto 0)</td>
 </tr>
 <tr>
-<td align="center">RIFFA_to_CPU_pipe_write_ack</td>
+<td align="center">FIFO_TO_AJIT_ACK</td>
 <td align="center"></td>
 <td align="center">out</td>
 <td align="center">std_logic_vector(0  downto 0)</td>
@@ -399,19 +399,19 @@
 <td align="center"><strong>VHDL Data Type</strong></td>
 </tr>
 <tr>
-<td align="center">CPU_to_RIFFA_pipe_read_data</td>
+<td align="center">AJIT_TO_FIFO_DATA</td>
 <td align="center"></td>
 <td align="center">out</td>
 <td align="center">std_logic_vector(63 downto 0)</td>
 </tr>
 <tr>
-<td align="center">CPU_to_RIFFA_pipe_read_req</td>
+<td align="center">AJIT_TO_FIFO_REQ</td>
 <td align="center"></td>
 <td align="center">in</td>
 <td align="center">std_logic_vector(0  downto 0)</td>
 </tr>
 <tr>
-<td align="center">CPU_to_RIFFA_pipe_read_ack</td>
+<td align="center">AJIT_TO_FIFO_ACK</td>
 <td align="center"></td>
 <td align="center">out</td>
 <td align="center">std_logic_vector(0  downto 0)</td>
